@@ -60,6 +60,7 @@ class Chart extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 for (final bucket in buckets)
+
                   ChartBar(
                     fill: bucket.totalExpenses == 0
                         ? 0
