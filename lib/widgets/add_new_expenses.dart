@@ -100,14 +100,18 @@ class _AddNewExpensesState extends State<AddNewExpenses> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Expanded(
-                  child: TextField(
-                  maxLength: 10,
-                    controller: _titleController,
-                    decoration: const InputDecoration(
-                      label: Text('Title'),
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 18.0,right: 10),
+                    child: TextField(
+                    maxLength: 10,
+                      controller: _titleController,
+                      decoration: const InputDecoration(
+                        label: Text('Title'),
+                      ),
                     ),
                   ),
                 ),
+
                 Expanded(
                   child: TextField(
                     keyboardType: TextInputType.number,
