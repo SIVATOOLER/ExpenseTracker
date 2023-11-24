@@ -82,6 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+   var width= MediaQuery.of(context).size.width;
     Widget mainContent = const Center(
       child: Text("No Expense Found"),
     );
@@ -103,9 +104,11 @@ class _HomeScreenState extends State<HomeScreen> {
               icon: const Icon(Icons.add))
         ],
       ),
-      body: Column(
+      body:width<600? Column(
         children: [Chart(expenses: expenseList), Expanded(child: mainContent)],
-      ),
+      ):Row(
+        children: [Expanded(child: Chart(expenses: expenseList)), Expanded(child: mainContent)],
+      )
     );
   }
 }
